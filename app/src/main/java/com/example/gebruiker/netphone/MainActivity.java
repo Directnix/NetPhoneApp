@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static boolean connected = false;
 
-    public static String playerid; // TODO: 25-9-2017 Player ID
+    public static String playerid;
     private String username;
 
     @Override
