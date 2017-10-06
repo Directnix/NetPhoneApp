@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gebruiker.netphone.GameActivity">
+
+    <ImageView
+        android:id="@+id/ga_iv_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ga_iv_head"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/spr_back" />
+
+    <ImageView
+        android:id="@+id/ga_iv_dash"
+        android:layout_width="0dp"
+        android:layout_height="314dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104"
+        app:srcCompat="@drawable/spr_dash_blue" />
+
+    <ImageView
+        android:id="@+id/ga_iv_head"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@color/colorPrimaryDark"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ga_tv_head_username"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:text="Directnix"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ga_tv_head_amount"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/ga_iv_head"
+        app:layout_constraintTop_toBottomOf="@+id/ga_iv_head" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        app:srcCompat="@android:drawable/ic_btn_speak_now"
+        app:layout_constraintTop_toTopOf="@+id/ga_iv_head"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ga_iv_head"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintRight_toLeftOf="@+id/ga_ib_menu"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/ga_tv_head_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/ga_iv_head"
+        app:layout_constraintTop_toBottomOf="@+id/ga_iv_head" />
+
+    <ImageButton
+        android:id="@+id/ga_ib_menu"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/ga_iv_head"
+        app:layout_constraintRight_toRightOf="@+id/ga_iv_head"
+        app:layout_constraintTop_toTopOf="@+id/ga_iv_head"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:layout_marginEnd="8dp" />
+
+    <ImageButton
+        android:id="@+id/ga_btn_gas"
+        android:layout_width="110dp"
+        android:layout_height="208dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="28dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.897"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ga_iv_dash"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/spr_gas"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="28dp" />
+
+    <ImageButton
+        android:id="@+id/ga_btn_brake"
+        android:layout_width="110dp"
+        android:layout_height="208dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ga_iv_dash"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/spr_brake"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/ga_iv_wheel"
+        android:layout_width="334dp"
+        android:layout_height="334dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="matrix"
+        app:srcCompat="@drawable/spr_wheel"
+        app:layout_constraintTop_toTopOf="@+id/ga_iv_back"
+        android:layout_marginTop="52dp"
+        app:layout_constraintRight_toLeftOf="@+id/ga_iv_dash"
+        app:layout_constraintLeft_toRightOf="@+id/ga_iv_dash"
+        tools:layout_editor_absoluteX="11dp" />
+
+</android.support.constraint.ConstraintLayout>
