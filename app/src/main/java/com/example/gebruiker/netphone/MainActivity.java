@@ -13,7 +13,9 @@ import android.widget.Toast;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.Socket;
+import java.net.UnknownHostException;
 import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public static DataOutputStream out;
 
     private Button btnConnect;
-    private EditText etUsername;
+    private EditText etUsername, etAddress;
 
     public static boolean connected = false;
 
@@ -38,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
         playerid = UUID.randomUUID().toString();
 
         etUsername = (EditText) findViewById(R.id.ma_et_username);
+        etAddress = (EditText) findViewById(R.id.ma_ed_address);
+
+        etAddress.setText("192.168.2.52");
 
         btnConnect = (Button) findViewById(R.id.ma_btn_connect);
         btnConnect.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             try {
-                                socket = new Socket("192.168.2.52", 8080);
+                                socket = new Socket(String.valueOf(etAddress.getText()), 8080);
 
                                 out = new DataOutputStream(socket.getOutputStream());
                                 in = new DataInputStream(socket.getInputStream());
